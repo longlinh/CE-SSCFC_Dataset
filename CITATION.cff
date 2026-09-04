@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: >-
+  Landsat-8 land-cover benchmark for semi-supervised collaborative clustering: Hanoi, Thanh Hoa, Ho Chi Minh City (Vietnam) and Valencia, Alicante (Spain)
+message: >-
+  If you use this dataset, please cite the Zenodo record (DOI below once
+  assigned) and the upstream sources: USGS Landsat-8 Collection 2 Level-2 and
+  ESA WorldCover 2021 v200 (Zanaga et al. 2022, doi:10.5281/zenodo.7254221).
+type: dataset
+authors:
+  - family-names: Nguyen
+    given-names: Xuan Hoang
+    orcid: https://orcid.org/0009-0007-1721-6931
+    affiliation: Hanoi University of Industry, Hanoi, Vietnam
+repository-code: https://github.com/longlinh/CE-SSCFC_Dataset
+license: CC-BY-4.0
+version: 1.0.0
+# doi: 10.5281/zenodo.XXXXXXX   # điền sau khi Zenodo cấp DOI (concept hoặc version DOI)
+keywords:
+  - Landsat-8
+  - land cover
+  - ESA WorldCover
+  - semi-supervised clustering
+  - collaborative clustering
+  - remote sensing

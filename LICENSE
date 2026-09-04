@@ -1,0 +1,11 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The derived products in this repository (surface-reflectance composites on the
+50 m working grid, RGB composites, and the 5-class / 6-class reference maps) are
+released under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Attribution of upstream sources:
+- Landsat-8 imagery courtesy of the U.S. Geological Survey (public domain).
+- Reference maps derived from ESA WorldCover 2021 v200 (CC BY 4.0), Zanaga et al.
+  2022, doi:10.5281/zenodo.7254221. Contains modified Copernicus Sentinel data
+  (2021) processed by the ESA WorldCover consortium.
