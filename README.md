@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22304965.svg)](https://doi.org/10.5281/zenodo.22304965)
 
-**Archived on Zenodo:** concept DOI [10.5281/zenodo.22304965](https://doi.org/10.5281/zenodo.22304965) (all versions); version 1.1.0 DOI [10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX). Licence CC BY 4.0.
+**Archived on Zenodo:** concept DOI [10.5281/zenodo.22304965](https://doi.org/10.5281/zenodo.22304965) (all versions); version 1.1.0 DOI [10.5281/zenodo.22855907](https://doi.org/10.5281/zenodo.22855907). Licence CC BY 4.0.
 
 Six Landsat-8 surface-reflectance scenes with independent land-cover reference maps derived from
 ESA WorldCover 2021, prepared for benchmarking semi-supervised and collaborative (multi-site)
@@ -125,7 +125,7 @@ X, y = X.reshape(-1, len(bands)), y.reshape(-1)
 - Reference maps derived from ESA WorldCover 2021 v200 (CC BY 4.0) — cite Zanaga et al. (2022),
   doi:10.5281/zenodo.7254221. Contains modified Copernicus Sentinel data (2021).
 - Derived products in this repository: CC BY 4.0 (see `LICENSE`). Cite the Zenodo record
-  (see `CITATION.cff`): X. H. Nguyen, *Landsat-8 land-cover benchmark for semi-supervised collaborative clustering: Hanoi, Thanh Hoa, Ho Chi Minh City, Hai Phong (Vietnam) and Valencia, Alicante (Spain)*, version 1.1.0, Zenodo, 2026, doi:10.5281/zenodo.XXXXXXX.
+  (see `CITATION.cff`): X. H. Nguyen, *Landsat-8 land-cover benchmark for semi-supervised collaborative clustering: Hanoi, Thanh Hoa, Ho Chi Minh City, Hai Phong (Vietnam) and Valencia, Alicante (Spain)*, version 1.1.0, Zenodo, 2026, doi:10.5281/zenodo.22855907.
 
 Related publications: listed in the Zenodo record metadata and updated as papers using this data
 appear.
