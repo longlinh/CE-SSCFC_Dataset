@@ -1,7 +1,7 @@
 {
-  "title": "Landsat-8 land-cover benchmark for semi-supervised collaborative clustering: Hanoi, Thanh Hoa, Ho Chi Minh City (Vietnam) and Valencia, Alicante (Spain)",
+  "title": "Landsat-8 land-cover benchmark for semi-supervised collaborative clustering: Hanoi, Thanh Hoa, Ho Chi Minh City, Hai Phong (Vietnam) and Valencia, Alicante (Spain)",
   "upload_type": "dataset",
-  "description": "<p>Five Landsat-8 Collection 2 Level-2 surface-reflectance composites (median of cloud-masked scenes, 2020–2023, Google Earth Engine, nominal 50 m grid, EPSG:4326) with independent land-cover reference maps derived from ESA WorldCover 2021 v200, prepared for benchmarking semi-supervised and collaborative (multi-site) clustering and classification.</p><p><b>Set 1 — Vietnam:</b> Hanoi, Thanh Hoa, Ho Chi Minh City; bands B2–B5; five classes (water, built-up, agriculture, perennial vegetation, forest); 3,499,830 pixels.</p><p><b>Set 2 — Spain:</b> Valencia, Alicante; bands B2–B7 (incl. SWIR); six WorldCover classes (tree cover, shrubland, grassland, cropland, built-up, water); 2,406,804 pixels.</p><p>Labelled regions and spatial block hold-outs are regenerated from the reference maps (protocol in README.md). Landsat-8 imagery courtesy of the U.S. Geological Survey; reference maps contain modified Copernicus Sentinel data (2021) processed by the ESA WorldCover consortium (CC BY 4.0).</p>",
+  "description": "<p>Six Landsat-8 Collection 2 Level-2 surface-reflectance composites (median of cloud-masked scenes, 2020–2023, Google Earth Engine, nominal 50 m grid, EPSG:4326) with independent land-cover reference maps derived from ESA WorldCover 2021 v200, prepared for benchmarking semi-supervised and collaborative (multi-site) clustering and classification.</p><p><b>Set 1 — Vietnam:</b> Hanoi, Thanh Hoa, Ho Chi Minh City, Hai Phong (added in v1.1.0); bands B2–B5; five classes (water, built-up, agriculture, perennial vegetation, forest); 4,707,442 pixels.</p><p><b>Set 2 — Spain:</b> Valencia, Alicante; bands B2–B7 (incl. SWIR); six WorldCover classes (tree cover, shrubland, grassland, cropland, built-up, water); 2,406,804 pixels.</p><p>Labelled regions and spatial block hold-outs are regenerated from the reference maps (protocol in README.md). Landsat-8 imagery courtesy of the U.S. Geological Survey; reference maps contain modified Copernicus Sentinel data (2021) processed by the ESA WorldCover consortium (CC BY 4.0).</p>",
   "creators": [
     {
       "name": "Nguyen, Xuan Hoang",
@@ -11,7 +11,7 @@
   ],
   "license": "cc-by-4.0",
   "access_right": "open",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "keywords": [
     "Landsat-8",
     "land cover",

@@ -1,17 +1,20 @@
-# Landsat-8 land-cover benchmark for semi-supervised collaborative clustering: Hanoi, Thanh Hoa, Ho Chi Minh City (Vietnam) and Valencia, Alicante (Spain)
+# Landsat-8 land-cover benchmark for semi-supervised collaborative clustering: Hanoi, Thanh Hoa, Ho Chi Minh City, Hai Phong (Vietnam) and Valencia, Alicante (Spain)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22304965.svg)](https://doi.org/10.5281/zenodo.22304965)
 
-**Archived on Zenodo:** concept DOI [10.5281/zenodo.22304965](https://doi.org/10.5281/zenodo.22304965) (all versions); version 1.0.0 DOI [10.5281/zenodo.22304966](https://doi.org/10.5281/zenodo.22304966). Licence CC BY 4.0.
+**Archived on Zenodo:** concept DOI [10.5281/zenodo.22304965](https://doi.org/10.5281/zenodo.22304965) (all versions); version 1.1.0 DOI [10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX). Licence CC BY 4.0.
 
-Five Landsat-8 surface-reflectance scenes with independent land-cover reference maps derived from
+Six Landsat-8 surface-reflectance scenes with independent land-cover reference maps derived from
 ESA WorldCover 2021, prepared for benchmarking semi-supervised and collaborative (multi-site)
 clustering / classification methods. Two sets share one acquisition protocol:
 
 | Set | Sites | Bands | Classes | Folder |
 |---|---|---|---|---|
-| Vietnam (VN3) | Hanoi, Thanh Hoa, Ho Chi Minh City | B2–B5 (4) | 5 | `landsat8/{hn,th2,hcm2}/` |
+| Vietnam (VN3 + HP) | Hanoi, Thanh Hoa, Ho Chi Minh City, Hai Phong | B2–B5 (4) | 5 | `landsat8/{hn,th2,hcm2,hp}/` |
 | Spain (ES2) | Valencia, Alicante | B2–B7 (6, incl. SWIR) | 6 | `landsat8/{valencia,alicante}/` |
+
+Version 1.1.0 adds Hai Phong (`hp`), a held-out site built with the same pipeline and added only after the
+evaluated methods and their parameters had been fixed; version 1.0.0 (doi:10.5281/zenodo.22304966) contains the five original sites.
 
 Labelled regions, validation folds and train/test partitions are regenerated at run time from the
 reference maps (protocol below), so no split files are distributed.
@@ -36,7 +39,8 @@ reference maps (protocol below), so no split files are distributed.
 | Hanoi | `hn` | 1201 × 1001 | 1,202,201 | 105.580–106.120°E / 20.850–21.300°N |
 | Thanh Hoa | `th2` | 981 × 825 | 809,325 | 105.400–105.840°E / 19.740–20.110°N |
 | Ho Chi Minh City | `hcm2` | 1336 × 1114 | 1,488,304 | 106.370–106.970°E / 10.675–11.175°N |
-| **Total** | | | **3,499,830** | |
+| Hai Phong | `hp` | 1204 × 1003 | 1,207,612 | 106.410–106.950°E / 20.625–21.075°N |
+| **Total** | | | **4,707,442** | |
 
 Reference map: the 10 m WorldCover map (Zanaga et al. 2022, doi:10.5281/zenodo.7254221, CC BY 4.0)
 is aggregated to the 50 m grid by majority vote (`reduceResolution(mode)`), snapped to the Landsat
@@ -44,15 +48,15 @@ grid (nearest) and remapped to five classes: 80, 90 → Water; 50, 60 → Built-
 Agriculture; 20, 95, 100 → Forest; 70 → NoData. Tree cover (10) is split by the NDVI of the Landsat
 composite (threshold 0.55) into Perennial vegetation (< 0.55) and Forest (≥ 0.55).
 
-| Value | Class | Hanoi | Thanh Hoa | Ho Chi Minh City |
-|---|---|---|---|---|
-| 0 | Water | 4.39 % | 2.67 % | 4.09 % |
-| 1 | Built-up | 26.58 % | 9.25 % | 30.07 % |
-| 2 | Agriculture | 44.74 % | 44.84 % | 29.06 % |
-| 3 | Perennial vegetation | 11.30 % | 5.35 % | 9.78 % |
-| 4 | Forest | 12.99 % | 37.89 % | 27.00 % |
+| Value | Class | Hanoi | Thanh Hoa | Ho Chi Minh City | Hai Phong |
+|---|---|---|---|---|---|
+| 0 | Water | 4.39 % | 2.67 % | 4.09 % | 27.99 % |
+| 1 | Built-up | 26.58 % | 9.25 % | 30.07 % | 15.11 % |
+| 2 | Agriculture | 44.74 % | 44.84 % | 29.06 % | 32.51 % |
+| 3 | Perennial vegetation | 11.30 % | 5.35 % | 9.78 % | 6.89 % |
+| 4 | Forest | 12.99 % | 37.89 % | 27.00 % | 17.50 % |
 
-Files per region (`{r}` ∈ hn, th2, hcm2):
+Files per region (`{r}` ∈ hn, th2, hcm2, hp):
 
 ```
 landsat8/{r}/
@@ -64,7 +68,7 @@ landsat8/{r}/
 ```
 
 Suggested protocol: class-pure circular labelled regions of radius 30 px, `n_regions_per_class`
-= 10 / 14 / 24 for hn / th2 / hcm2 (≈ 3.8 % / 7.2 % / 7.2 % of pixels); spatially disjoint hold-out
+= 10 / 14 / 24 / 10 for hn / th2 / hcm2 / hp (≈ 3.8 % / 7.2 % / 7.2 % / 5.0 % of pixels); spatially disjoint hold-out
 by 32 × 32-pixel blocks (≈ 30 % of blocks, labelled pixels always in the training partition);
 features z-scored per site.
 
@@ -121,7 +125,7 @@ X, y = X.reshape(-1, len(bands)), y.reshape(-1)
 - Reference maps derived from ESA WorldCover 2021 v200 (CC BY 4.0) — cite Zanaga et al. (2022),
   doi:10.5281/zenodo.7254221. Contains modified Copernicus Sentinel data (2021).
 - Derived products in this repository: CC BY 4.0 (see `LICENSE`). Cite the Zenodo record
-  (see `CITATION.cff`): X. H. Nguyen, *Landsat-8 land-cover benchmark for semi-supervised collaborative clustering: Hanoi, Thanh Hoa, Ho Chi Minh City (Vietnam) and Valencia, Alicante (Spain)*, version 1.0.0, Zenodo, 2026, doi:10.5281/zenodo.22304966.
+  (see `CITATION.cff`): X. H. Nguyen, *Landsat-8 land-cover benchmark for semi-supervised collaborative clustering: Hanoi, Thanh Hoa, Ho Chi Minh City, Hai Phong (Vietnam) and Valencia, Alicante (Spain)*, version 1.1.0, Zenodo, 2026, doi:10.5281/zenodo.XXXXXXX.
 
 Related publications: listed in the Zenodo record metadata and updated as papers using this data
 appear.

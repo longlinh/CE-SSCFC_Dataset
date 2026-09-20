@@ -22,6 +22,14 @@ fc33057c5b840547d09c0f9af95d837b  landsat8/hcm2/hcm2_z50_RGB.tif
 2f54e6f535843a5d13f3cfc3b41b39d8  landsat8/hcm2/hcm2_z50_WorldCover2021_5class.tif
 c56ead415ac5235f4114b3bcfc07c53b  landsat8/hcm2/hcm2_z50_WorldCover2021_5class_rgb.tif
 caa7c1a126f8c3d74a352d180a120645  landsat8/hcm2/hcm2_z50_gt_validation.png
+e0899c17205f99fddaec340e686287ad  landsat8/hp/hp_z50_SR_B2.tif
+78c5a3564898ef261b34a7c0f4f4883a  landsat8/hp/hp_z50_SR_B3.tif
+1627c927907273ba7ea439fa5484070a  landsat8/hp/hp_z50_SR_B4.tif
+becd1b6f688b050a64ce4f06d38c35a0  landsat8/hp/hp_z50_SR_B5.tif
+96323a463c3c64a0d5d63f2421eee4d1  landsat8/hp/hp_z50_RGB.tif
+242e914ac8b2714556e77564d7937dd7  landsat8/hp/hp_z50_WorldCover2021_5class.tif
+198b173244f48ad509f3a0e457ef5828  landsat8/hp/hp_z50_WorldCover2021_5class_rgb.tif
+d1d15433c68767155d33177a980f6de7  landsat8/hp/hp_z50_gt_validation.png
 da2ebb6bd7f6c3b8b42fb9d0bc7b134d  landsat8/valencia/valencia_z50_SR_B2.tif
 6d17d49de1f424afce104c4fdc0161be  landsat8/valencia/valencia_z50_SR_B3.tif
 8f8e13a0afa5316e5629bf4a6f4c9e8f  landsat8/valencia/valencia_z50_SR_B4.tif
